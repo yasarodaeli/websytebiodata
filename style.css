@@ -1,0 +1,178 @@
+:root {
+  --primary: #c2874d;
+  --background: #0a0a0a;
+  --Secondary: #2343f2;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--background);
+  color: #fff;
+}
+
+.background-container {
+  background-image: url(Media/skydream.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Adjust the alpha value (0.2 for 20% opacity) */
+  width: 100%;
+  height: 100vh; /* Adjust to cover the entire viewport height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #2343f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin: 0 1rem;
+  transform: translateY(7px);
+  position: relative;
+  bottom: 3px;
+}
+
+.navbar .navbar-nav span {
+  color: var(--Secondary);
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--Secondary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--Secondary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5 rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hover Text */
+
+.text-container .main-text h3::after,
+.text-container2 .main-text2 h4::after,
+.text-container3 .main-text3 h5::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: solid var(--Secondary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.text-container .main-text h3:hover::after,
+.text-container2 .main-text2 h4:hover::after,
+.text-container3 .main-text3 h5:hover::after {
+  transform: scaleX(1);
+}
+
+/* Footer */
+footer {
+  background-color: rgba(1, 1, 1, 0.8);
+  border-top: 1px solid #2343f2;
+  padding: 2rem 0;
+  margin-top: 6rem;
+}
+
+footer .social a {
+  color: #fff;
+  margin-left: 4rem;
+}
+
+footer .social span {
+  position: relative;
+  bottom: 7px;
+  left: 20px;
+}
+
+footer .social a:hover {
+  color: var(--Secondary);
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
